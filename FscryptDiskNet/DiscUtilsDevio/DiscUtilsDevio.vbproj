@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <OutputType>Exe</OutputType>
+    <RootNamespace>LTR.IO.FscryptDisk.Devio.DiscUtilsDevio</RootNamespace>
+    <Title>DiscUtilsDevio</Title>
+    <Description>FscryptDisk Devio for DiscUtils library</Description>
+
+    <TargetFrameworks>net46;net48;net6.0-windows;net8.0-windows</TargetFrameworks>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevioNet\DevioNet.vbproj" />
+    <ProjectReference Include="..\FscryptDiskNet\FscryptDiskNet.vbproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LTRData.DiscUtils.Core" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Dmg" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Streams" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Vdi" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Vhd" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Vhdx" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Vmdk" Version="*" />
+    <PackageReference Include="LTRData.DiscUtils.Xva" Version="*" />
+  </ItemGroup>
+  
+</Project>

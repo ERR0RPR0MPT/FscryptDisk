@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+  
+    <RootNamespace>LTR.IO</RootNamespace>
+    <Title>FscryptDiskNet</Title>
+    <Description>FscryptDisk Low Level API Library</Description>
+
+    <AssemblyOriginatorKeyFile>FscryptDiskNet.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+
+    <TargetFrameworks>net20;net40;net48;net6.0-windows;net8.0-windows;netstandard2.0</TargetFrameworks>
+
+    <!-- <RegisterForComInterop Condition="'$(TargetFramework)|$(Configuration)' == 'net40|Release'">true</RegisterForComInterop> -->
+
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,2 @@
+#include "fscryptdisk.rc"
+#include "dlg.rc"

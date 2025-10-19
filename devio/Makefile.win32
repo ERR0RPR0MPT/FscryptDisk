@@ -1,0 +1,18 @@
+all: Release\x86\devio.exe
+
+publish: P:\Utils\devio.exe Z:\ltr-website\ltr-data.se\files\devio.exe
+
+P:\Utils\devio.exe: Release\x86\devio.exe
+	copy /y Release\x86\devio.exe P:\Utils\\
+
+Z:\ltr-website\ltr-data.se\files\devio.exe: Release\x86\devio.exe
+	copy /y Release\x86\devio.exe Z:\ltr-website\ltr-data.se\files\\
+
+Release\x86\devio.obj: devio.c ..\inc\*.h safeio.h devio.h devio_types.h Makefile.win32
+	cl /c /WX /W4 /wd4201 /wd4204 /wd4996 /Ox /GF /MD /FoRelease\x86\devio.obj /nologo devio.c
+
+Release\x86\safeio_win32.obj: safeio_win32.cpp ..\inc\*.h safeio.h devio.h devio_types.h Makefile.win32
+	cl /c /WX /W4 /wd4201 /wd4204 /wd4996 /Ox /GF /MD /FoRelease\x86\safeio_win32.obj /nologo safeio_win32.cpp
+
+Release\x86\devio.exe: Release\x86\devio.obj Release\x86\safeio_win32.obj Makefile.win32
+	link /opt:nowin98,ref,icf=10 /largeaddressaware /defaultlib:bufferoverflowU.lib /release /debug /nologo /out:Release\x86\devio.exe Release\x86\devio.obj Release\x86\safeio_win32.obj

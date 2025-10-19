@@ -1,0 +1,8 @@
+TARGETNAME=awefsalloc
+TARGETPATH=.
+TARGETTYPE=DRIVER
+SOURCES=awefsalloc.c awefsalloc.rc
+MSC_WARNING_LEVEL=/W4 /WX /wd4100
+!IF "$(NTDEBUG)" != "ntsd"
+MSC_OPTIMIZATION=/Ox /GF
+!ENDIF

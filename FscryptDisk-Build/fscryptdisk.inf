@@ -1,0 +1,266 @@
+[Version]
+signature = "$Windows NT$"
+Provider = "LTR Data"
+DriverVer=02/04/2023,6.0.6001.18000
+
+
+[SourceDisksNames]
+1 = "FscryptDisk Virtual Disk Driver Installation disk"
+
+
+[SourceDisksFiles.x86]
+deviodrv.sys = 1,deviodrv\x86
+fscryptdisk.sys = 1,sys\x86
+fscryptdsksvc.exe = 1,svc\x86
+fscryptdisk.cpl = 1,cpl\x86
+fscryptdisk.exe = 1,cli\x86
+fscryptdisk.inf = 1
+fscryptdisk.pnf = 1
+uninstall_fscryptdisk.cmd = 1
+
+
+[SourceDisksFiles.ia64]
+deviodrv.sys = 1,deviodrv\ia64
+fscryptdisk.sys = 1,sys\ia64
+fscryptdsksvc.exe = 1,svc\ia64
+fscryptdisk.cpl = 1,cpl\ia64
+fscryptdisk.exe = 1,cli\ia64
+fscryptdisk.inf = 1
+fscryptdisk.pnf = 1
+uninstall_fscryptdisk.cmd = 1
+
+
+[SourceDisksFiles.i386]
+deviodrv.sys = 1,deviodrv\i386
+fscryptdisk.sys = 1,sys\i386
+fscryptdsksvc.exe = 1,svc\i386
+fscryptdisk.cpl = 1,cpl\i386
+fscryptdisk.exe = 1,cli\i386
+fscryptdisk.inf = 1
+fscryptdisk.pnf = 1
+uninstall_fscryptdisk.cmd = 1
+
+
+[SourceDisksFiles.amd64]
+deviodrv.sys = 1,deviodrv\amd64
+fscryptdisk.sys = 1,sys\amd64
+fscryptdsksvc.exe = 1,svc\amd64
+fscryptdisk.cpl = 1,cpl\amd64
+fscryptdisk.exe = 1,cli\amd64
+fscryptdisk.inf = 1
+fscryptdisk.pnf = 1
+uninstall_fscryptdisk.cmd = 1
+
+
+[DestinationDirs]
+FscryptDiskExeFiles = 11
+FscryptDiskExe32Files = 16425
+FscryptDiskSysFiles = 12
+FscryptDiskInfFiles = 17
+FscryptDiskPnfFiles = 17
+
+
+[DefaultInstall.ntx86]
+CopyFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskInfFiles
+AddReg = FscryptDiskAddReg
+DelReg = FscryptDiskDelOldReg
+
+
+[DefaultUninstall.ntx86]
+DelFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskInfFiles, FscryptDiskPnfFiles
+DelReg = FscryptDiskDelReg
+
+
+[DefaultInstall.ntarm]
+CopyFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskInfFiles
+AddReg = FscryptDiskAddReg
+DelReg = FscryptDiskDelOldReg
+
+
+[DefaultUninstall.ntarm]
+DelFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskInfFiles, FscryptDiskPnfFiles
+DelReg = FscryptDiskDelReg
+
+
+[DefaultInstall.ntamd64]
+CopyFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles
+AddReg = FscryptDiskAddReg
+DelReg = FscryptDiskDelOldReg
+
+
+[DefaultUninstall.ntamd64]
+DelFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles, FscryptDiskPnfFiles
+DelReg = FscryptDiskDelReg
+
+
+[DefaultInstall.ntarm64]
+CopyFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles
+AddReg = FscryptDiskAddReg
+DelReg = FscryptDiskDelOldReg
+
+
+[DefaultUninstall.ntarm64]
+DelFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles, FscryptDiskPnfFiles
+DelReg = FscryptDiskDelReg
+
+
+[DefaultInstall.ntia64]
+CopyFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles
+AddReg = FscryptDiskAddReg
+DelReg = FscryptDiskDelOldReg
+
+
+[DefaultUninstall.ntia64]
+DelFiles = FscryptDiskSysFiles, FscryptDiskExeFiles, FscryptDiskExe32Files, FscryptDiskInfFiles, FscryptDiskPnfFiles
+DelReg = FscryptDiskDelReg
+
+
+[DefaultInstall.ntx86.Services]
+AddService = DevIoDrv, , DevIoDrv
+AddService = FscryptDisk, , FscryptDskDrv
+AddService = FscryptDskSvc, , FscryptDskSvc
+
+
+[DefaultUninstall.ntx86.Services]
+DelService = DevIoDrv
+DelService = FscryptDisk
+DelService = FscryptDskSvc
+
+
+[DefaultInstall.ntarm.Services]
+AddService = DevIoDrv, , DevIoDrv
+AddService = FscryptDisk, , FscryptDskDrv
+AddService = FscryptDskSvc, , FscryptDskSvc
+
+
+[DefaultUninstall.ntarm.Services]
+DelService = DevIoDrv
+DelService = FscryptDisk
+DelService = FscryptDskSvc
+
+
+[DefaultInstall.ntamd64.Services]
+AddService = DevIoDrv, , DevIoDrv
+AddService = FscryptDisk, , FscryptDskDrv
+AddService = FscryptDskSvc, , FscryptDskSvc
+
+
+[DefaultUninstall.ntamd64.Services]
+DelService = DevIoDrv
+DelService = FscryptDisk
+DelService = FscryptDskSvc
+
+
+[DefaultInstall.ntarm64.Services]
+AddService = DevIoDrv, , DevIoDrv
+AddService = FscryptDisk, , FscryptDskDrv
+AddService = FscryptDskSvc, , FscryptDskSvc
+
+
+[DefaultUninstall.ntarm64.Services]
+DelService = DevIoDrv
+DelService = FscryptDisk
+DelService = FscryptDskSvc
+
+
+[DefaultInstall.ntia64.Services]
+AddService = DevIoDrv, , DevIoDrv
+AddService = FscryptDisk, , FscryptDskDrv
+AddService = FscryptDskSvc, , FscryptDskSvc
+
+
+[DefaultUninstall.ntia64.Services]
+DelService = DevIoDrv
+DelService = FscryptDisk
+DelService = FscryptDskSvc
+
+
+[FscryptDiskExeFiles]
+fscryptdisk.exe
+fscryptdisk.cpl
+fscryptdsksvc.exe
+uninstall_fscryptdisk.cmd
+
+
+[FscryptDiskExe32Files]
+fscryptdisk.exe,cli\i386\fscryptdisk.exe
+fscryptdisk.cpl,cpl\i386\fscryptdisk.cpl
+
+
+[FscryptDiskSysFiles]
+deviodrv.sys
+fscryptdisk.sys
+
+
+[FscryptDiskInfFiles]
+fscryptdisk.inf
+
+
+[FscryptDiskPnfFiles]
+fscryptdisk.pnf
+
+
+[FscryptDiskAddReg]
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "DisplayName", 0, "FscryptDisk Virtual Disk Driver"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "Publisher", 0, "LTR Data"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "HelpLink", 0, "http://ltr-data.se/opencode.html"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "DisplayVersion", 0, "*"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "UninstallString", 0x00020000, """%%SystemRoot%%\system32\cmd.exe"" /c ""%%SystemRoot%%\system32\uninstall_fscryptdisk.cmd"""
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "DisplayIcon", 0, "%11%\fscryptdisk.cpl"
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "EstimatedSize", 65537, 320
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "NoRepair", 65537, 1
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "NoModify", 65537, 1
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk", "Size", 0, ""
+
+HKCR, "*\shell\FscryptDiskMountFile", , 0, "Mount as FscryptDisk Virtual Disk"
+HKCR, "*\shell\FscryptDiskMountFile\command", , 0, "rundll32.exe fscryptdisk.cpl,RunDLL_MountFile %%L"
+
+HKCR, "Drive\shell\FscryptDiskUnmount", , 0, "Unmount FscryptDisk Virtual Disk"
+HKCR, "Drive\shell\FscryptDiskUnmount\command", , 0, "rundll32.exe fscryptdisk.cpl,RunDLL_RemoveDevice %%L"
+
+HKCR, "Drive\shell\FscryptDiskSaveImage", , 0, "Save disk contents as image file"
+HKCR, "Drive\shell\FscryptDiskSaveImage\command", , 0, "rundll32.exe fscryptdisk.cpl,RunDLL_SaveImageFile %%L"
+
+
+[FscryptDiskDelOldReg]
+HKCR, "*\shell\FscryptDiskMountFileWriteable"
+
+
+[FscryptDiskDelReg]
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\FscryptDisk"
+
+HKCR, "*\shell\FscryptDiskMountFile"
+
+HKCR, "*\shell\FscryptDiskMountFileWriteable"
+
+HKCR, "Drive\shell\FscryptDiskUnmount"
+
+HKCR, "Drive\shell\FscryptDiskSaveImage"
+
+
+[FscryptDskDrv]
+DisplayName = "FscryptDisk Virtual Disk Driver"
+Description = "Disk emulation driver"
+ServiceType = 1
+StartType = 2
+ErrorControl = 0
+ServiceBinary = %12%\fscryptdisk.sys
+
+
+[DevIoDrv]
+DisplayName = "DevIO Client Driver"
+Description = "Client driver for FscryptDisk devio proxy mode"
+ServiceType = 1
+StartType = 2
+ErrorControl = 0
+ServiceBinary = %12%\deviodrv.sys
+
+
+[FscryptDskSvc]
+DisplayName = "FscryptDisk Virtual Disk Driver Helper"
+Description = "Helper service for FscryptDisk Virtual Disk Driver."
+ServiceType = 16
+StartType = 2
+ErrorControl = 0
+ServiceBinary = %11%\fscryptdsksvc.exe
+

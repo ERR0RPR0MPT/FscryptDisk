@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <RootNamespace>LTR.IO.FscryptDisk.Devio</RootNamespace>
+    <Title>DevioNet</Title>
+    <Description>FscryptDisk Devio for DiscUtils Library</Description>
+
+    <AssemblyOriginatorKeyFile>DevioNet.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+
+    <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+
+    <TargetFrameworks>net40;net48;net6.0-windows;net8.0-windows;netstandard2.0</TargetFrameworks>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FscryptDiskNet\FscryptDiskNet.vbproj" />
+  </ItemGroup>
+
+</Project>
